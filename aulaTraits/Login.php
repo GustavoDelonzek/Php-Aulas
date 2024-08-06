@@ -37,6 +37,10 @@
             $this->curso = $curso;
         }   
 
+        public function __toString() {
+            return "Nome: {$this->nome}, Matrícula: {$this->matricula}, Curso: {$this->curso}";
+        }
+
     }
 
 
@@ -61,7 +65,9 @@
 
     $sistema = new CadastroAlunos();
     $sistema->cadastrar($aluno1);
-
+    $sistema->listar();
+    echo "------------------------------------------<br>";
+    $sistema->cadastrar($aluno2);
     $sistema->listar();
 
 ?>
